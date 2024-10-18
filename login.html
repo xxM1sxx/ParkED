@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body{
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+            background-image: url('asset/image\ \(7\).png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .login-container {
+            max-width: 900px;
+            margin: 100px auto;
+        }
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .card-header {
+            color: white;
+            text-align: center;
+            border-radius: 0rem 1rem 0 0 !important;
+            padding: 1.5rem;
+        }
+        .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-warning.btn-login {
+            color: #212529;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        .btn-warning.btn-login:hover {
+            color: white;
+            background-color: #e0a800;
+            border-color: #d39e00;
+        }
+        .btn-google {
+            color: white !important;
+            background-color: #ea4335;
+        }
+        .btn-google:hover {
+            color: white !important;
+            background-color: #d33426;
+        }
+        .btn-facebook {
+            color: white !important;
+            background-color: #3b5998;
+        }
+        .btn-facebook:hover {
+            background-color: #2d4373;
+        }
+        .image-container {
+            background-image: url('asset/Image (4).png');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            border-radius: 1rem 0 0 1rem;
+        }
+        .text-b{
+            font-weight: bold;
+        }
+        .btn-outline-primary.btn-login:hover {
+            color: white;
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-6 p-0">
+                    <div class="image-container"></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-header bg-warning">
+                        <h3 class="mb-0 text-white text-b">Login</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-warning text-white btn-login text-uppercase fw-bold">Sign in</button>
+                                <button class="btn btn-google btn-login text-uppercase fw-bold mt-3" type="submit">
+                                    <i class="fab fa-google me-2 text-white"></i> Sign in with Google
+                                </button>
+                            </div>
+                            
+                        </form>
+                        <div class="d-grid">
+                            <p class="text-center mt-3">Don't have an account?</p>
+                            <a href="register.html" class="btn btn-outline-primary btn-login text-uppercase fw-bold">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>

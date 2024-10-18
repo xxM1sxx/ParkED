@@ -86,7 +86,46 @@
         .navbar {
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
-        
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan 50% opacity */
+        }
+
+        .modal-content {
+            background-image: url('asset/Image (4).png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7); /* Warna putih dengan 70% opacity */
+            z-index: 0;
+        }
+
+        .modal-header, .modal-body {
+            position: relative;
+            z-index: 1;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding: 1rem 1rem 0.5rem;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
 
         .btn-custom {
             background-color: #ffc107;
@@ -256,26 +295,6 @@
             height: 100%;
             object-fit: cover;
         }
-
-        /* Add this new animation for the "What is Parkinson?" section */
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .fade-in-right {
-            opacity: 0;
-        }
-
-        .fade-in-right.animated {
-            animation: fadeInRight 0.6s ease-out forwards;
-        }
     </style>
 </head>
 <body>
@@ -288,7 +307,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Information</a></li>
                 </ul>
             </div>
@@ -301,18 +320,18 @@
             <div class="col-md-6 hero-content">
                 <h1 class="display-4 fw-bold">Learn About Parkinson's Disease Predictor</h1>
                 <p class="lead">Discover way to manage</p>
-                <a href="Disclaimer.html" class="btn btn-light btn-ripple" >Diagnose Now</a>
+                <button class="btn btn-light btn-ripple" data-bs-toggle="modal" data-bs-target="#choiceModal">Diagnose Now</button>
             </div>
             <div class="col-md-6 hero-image"></div>
         </div>
 
         <div class="row mt-5">
-            <div class="col-md-6 fade-in-right animate-on-scroll">
+            <div class="col-md-6">
                 <h2>What is Parkinson?</h2>
                 <h3>Understanding Parkinson's Disease</h3>
                 <p>Parkinson's disease is a progressive nervous system disorder that affects movement. Symptoms start gradually, sometimes with a barely noticeable tremor in just one hand. Tremors are common, but the disorder also commonly causes stiffness or slowing of movement. In the early stages of Parkinson's disease, your face may show little or no expression. Your arms may not swing when you walk. Your speech may become soft or slurred. Parkinson's disease symptoms worsen as your condition progresses over time.</p>
             </div>
-            <div class="col-md-6 fade-in-right animate-on-scroll" style="animation-delay: 0.3s;">
+            <div class="col-md-6">
                 <img src="asset/Image (2).png" alt="Neurons" class="img-fluid rounded" loading="lazy">
             </div>
         </div>
@@ -410,11 +429,10 @@
                 <div class="col-md-3">
                     <h3 class="h6 mb-3">Resources</h3>
                     <ul class="list-unstyled">
-                        <li><a href="physiotherapy.html" class="text-white text-decoration-none">Physiotherapy</a></li>
-                        <li><a href="speechtherapy.html" class="text-white text-decoration-none">Speech Therapy</a></li>
-                        <li><a href="Psychotherapy.html" class="text-white text-decoration-none">Psychotherapy</a></li>
-                        <li><a href="DBS.html" class="text-white text-decoration-none">Deep Brain Stimulation</a></li>
-                        <li><a href="GammaKnife.html" class="text-white text-decoration-none">Gamma Knife Surgery</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Educational Articles</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Research News</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Support Groups</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Caregiver Resources</a></li>
                         <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
                         <li><a href="#" class="text-white text-decoration-none">Glossary</a></li>
                     </ul>
@@ -436,7 +454,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="choiceModal" tabindex="-1" aria-labelledby="choiceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h5 class="modal-title mb-4" id="choiceModalLabel">Choose Your Role</h5>
+            <div class="d-grid gap-3">
+                <a href="Disclaimer.html" class="btn btn-custom btn-lg">Patient</a>
+                <a href="#" class="btn btn-custom btn-lg">Doctor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script>
     document.querySelectorAll('.btn-ripple').forEach(button => {
