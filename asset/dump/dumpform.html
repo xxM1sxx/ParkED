@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doa_Ibu - Form Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+    *, html{
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+    }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        /* Add any additional styles you need here */
+        .bg-cream {
+            background-color: #FFF5E6; /* Warna krem lembut */
+        }
+        .bg-orange {
+    background-color: #FFA500; /* Warna oranye */
+        }
+        .number-circle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            border: 1px solid black; /* Menambahkan border hitam */
+        }
+        .border-dashed {
+            border-style: dashed !important;
+        }
+        .dropzone {
+            background-color: #ffffff;
+            cursor: pointer;
+        }
+        .dropzone:hover {
+            background-color: #f8f9fa;
+        }
+        .dropzone.highlight {
+            border-color: #007bff;
+            background-color: #e9ecef;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ParkEd</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Diagnose</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Information</a></li>
+                </ul>
+            </div>
+            <button class="btn bg-warning text-white d-none d-lg-block" type="button">Login</button>
+        </div>
+    </nav>
+
+
+    <section class="py-5 bg-cream">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-2">Diagnosa 1</h2>
+                    <p class="text-center text-muted mb-4">Subtitle</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">1</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">2</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">3</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning">See guide</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
+                            <form class="upload-form">
+                                <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                <i class="fas fa-image fa-3x text-muted mb-3"></i>
+                                <p class="mb-2">Drag and drop an image here</p>
+                                <p class="text-muted small mb-3">or</p>
+                                <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
+                            </form>
+                        </div>
+                        <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section class="py-5 bg-orange">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-2">Diagnosa 1</h2>
+                    <p class="text-center text-muted mb-4">Subtitle</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">1</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">2</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">3</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning">See guide</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
+                            <form class="upload-form">
+                                <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                <i class="fas fa-image fa-3x text-muted mb-3"></i>
+                                <p class="mb-2">Drag and drop an image here</p>
+                                <p class="text-muted small mb-3">or</p>
+                                <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
+                            </form>
+                        </div>
+                        <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-cream">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-2">Diagnosa 1</h2>
+                    <p class="text-center text-muted mb-4">Subtitle</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">1</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">2</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex align-items-center mb-2">
+                                    <span class="bg-warning rounded-circle me-2 number-circle">3</span>
+                                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-warning">See guide</button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
+                            <form class="upload-form">
+                                <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                <i class="fas fa-image fa-3x text-muted mb-3"></i>
+                                <p class="mb-2">Drag and drop an image here</p>
+                                <p class="text-muted small mb-3">or</p>
+                                <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
+                            </form>
+                        </div>
+                        <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h2 class="h5 mb-3">Doa_Ibu</h2>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="h6 mb-3">Use cases</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">UI design</a></li>
+                        <li><a href="#">UX design</a></li>
+                        <li><a href="#">Wireframing</a></li>
+                        <li><a href="#">Diagramming</a></li>
+                        <li><a href="#">Brainstorming</a></li>
+                        <li><a href="#">Online whiteboard</a></li>
+                        <li><a href="#">Team collaboration</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="h6 mb-3">Explore</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Design</a></li>
+                        <li><a href="#">Prototyping</a></li>
+                        <li><a href="#">Development features</a></li>
+                        <li><a href="#">Design systems</a></li>
+                        <li><a href="#">Collaboration features</a></li>
+                        <li><a href="#">Design process</a></li>
+                        <li><a href="#">FigJam</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="h6 mb-3">Resources</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Best practices</a></li>
+                        <li><a href="#">Colors</a></li>
+                        <li><a href="#">Color wheel</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Resource library</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let dropArea = document.getElementById('drop-area');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropArea.classList.add('highlight');
+        }
+
+        function unhighlight(e) {
+            dropArea.classList.remove('highlight');
+        }
+
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            ([...files]).forEach(uploadFile);
+        }
+
+        function uploadFile(file) {
+            // Implementasi upload file ke server Anda di sini
+            console.log('Uploading file:', file.name);
+            // Contoh: bisa menggunakan FormData dan fetch untuk mengirim file ke server
+        }
+    </script>
+</body>
+</html>
