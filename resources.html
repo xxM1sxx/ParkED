@@ -3,325 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
+    <title>Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-        body {
-        font-family: "DM Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: normal;
-        font-style: normal;
+        body{
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
         }
 
-        .navbar-brand {
+        .resource-navbar-brand {
             font-weight: bold;
         }
 
-        .navbar {
+        .resource-navbar {
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
 
-        .footer {
+        .resource-footer {
             background-color: #ffc107;
             padding: 1rem 0;
         }
 
-        .social-icons a {
+        .resource-social-icons a {
             transition: transform 0.3s ease;
         }
 
-        .social-icons a:hover {
+        .resource-social-icons a:hover {
             transform: translateY(-3px);
         }
 
-        footer a {
+        .resource-footer a {
             transition: color 0.3s ease;
         }
 
-        footer a:hover {
+        .resource-footer a:hover {
             color: #ffc107 !important;
         }
 
-        /* Existing styles */
-        .form-container {
+        .resource-form-container {
             background-color: #f8f9fa;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-primary {
+        .resource-btn-primary {
             background-color: #ffc107;
             border-color: #ffc107;
         }
 
-        .btn-primary:hover {
+        .resource-btn-primary:hover {
             background-color: #ffca2c;
             border-color: #ffca2c;
         }
 
-        .text-bold {
-    font-weight: bold;
-}
+        .resource-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+            animation: resourceFadeIn 0.5s ease-in forwards;
+        }
 
-.card {
-    margin-bottom: 2rem;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card-body {
-    padding: 2rem;
-}
-
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.px-3 {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.card img {
-    object-fit: cover;
-    height: 100%;
-}
-
-@media (max-width: 767px) {
-    .card img {
-        height: 200px;
-    }
-}
-
-@media (min-width: 768px) {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-    .text-bold{
-        font-weight: bold;
-    }
-
-
-.container {
-    /* Bootstrap default, included for completeness */
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-@media (max-width: 767px) {
-    .card .row {
-        flex-direction: row !important;
-    }
-    .card .col-4 {
-        width: 120px !important;
-    }
-    .card .col-8 {
-        width: calc(100% - 120px) !important;
-    }
-}
-
-@media (min-width: 768px) {
-    .card .col-md-4 {
-        width: 120px !important;
-    }
-    .card .col-md-8 {
-        width: calc(100% - 120px) !important;
-    }
-}
-
-.card img {
-    height: 120px;
-    object-fit: cover;
-}
-
-@media (max-width: 767px) {
-    .card img {
-        height: 100%;
-    }
-}
-
-.card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.card {
-    transition: opacity 0.5s ease;
-    opacity: 0;
-}
-
-.card.show {
-    opacity: 1;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card.animate {
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-        /* Updated animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
+        @keyframes resourceFadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* Apply animations to elements */
-        .bg-warning h1, .container:not(footer .container) h2, 
-        .container:not(footer .container) p, .card {
-            opacity: 0;
-            transform: translateY(20px);
+        .resource-fade-in {
+            animation-fill-mode: both;
         }
 
-        .bg-warning h1.animate, .container:not(footer .container) h2.animate, 
-        .container:not(footer .container) p.animate, .card.animate {
-            animation: fadeInUp 0.5s ease forwards;
-        }
-
-        /* Remove the existing card animation styles */
-        .card {
-            transition: none;
-        }
-
-        .card.show {
-            opacity: 0;
-        }
-
-        .card-link:hover {
-            transform: none;
-            box-shadow: none;
-        }
-
-        .bg-warning h1 {
-            opacity: 1; /* Change this from 0 to 1 */
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .bg-warning h1.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .card {
+        .resource-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .card-link:hover .card {
+        .resource-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* Ensure these styles don't conflict with the existing animation */
-        .card.animate {
-            animation: fadeInUp 0.5s ease forwards;
+        .resource-card-link {
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Adjust card image styles for better responsiveness */
-        @media (max-width: 767px) {
-            .card .row {
-                flex-direction: row !important;
-            }
-            .card .col-4 {
-                width: 120px !important;
-            }
-            .card .col-8 {
-                width: calc(100% - 120px) !important;
-            }
+        .resource-card-link:hover {
+            color: inherit;
         }
 
-        @media (min-width: 768px) {
-            .card .col-md-4, .card .col-md-5 {
-                width: 120px !important;
-            }
-            .card .col-md-8, .card .col-md-7 {
-                width: calc(100% - 120px) !important;
-            }
+        .resource-card-title {
+            color: #000000;
+            font-weight: 600;
         }
 
-        .card img {
-            height: 120px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 767px) {
-            .card img {
-                height: 100%;
-            }
+        .resource-text-bold-1{
+            font-weight: 700;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top resource-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">ParkED</a>
+            <a class="navbar-brand resource-navbar-brand" href="#">ParkED</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -332,31 +122,30 @@
                     <li class="nav-item"><a class="nav-link" href="#">Information</a></li>
                 </ul>
             </div>
-            <button class="btn bg-warning text-white d-none d-lg-block" type="button">Sign In</button>
+            <a href="login.html" class="btn bg-warning text-white d-none d-lg-block" type="button">Sign In</a>
         </div>
     </nav>
 
-
     <section class="bg-warning">
-        <h1 class="text-center py-5 sect-2 text-bold">What to do next when <br> Parkinson's disease is <br>suspected ?</h1>
+        <h1 class="text-center py-5 sect-2 resource-text-bold-1 resource-fade-in">What to do next when <br> Parkinson's disease is <br>suspected ?</h1>
     </section>
     
 
     <section>
         <div class="container mt-5">
-            <h2 class="text-center mb-4 text-bold">Therapy</h2>
-            <p class="text-center mb-4">If you have Parkinson's there are several therapies that you can try but remember it must be with the direction of an expert.</p>
+            <h2 class="text-center mb-4 text-bold resource-fade-in">Therapy</h2>
+            <p class="text-center mb-4 resource-fade-in">If you have Parkinson's there are several therapies that you can try but remember it must be with the direction of an expert.</p>
             
             <div class="row mb-1">
-                <div class="col-md-4 mb-4">
-                    <a href="physiotherapy.html" class="card-link">
-                        <div class="card h-90">
+                <div class="col-md-4 mb-4 text-decoration-none resource-fade-in" style="animation-delay: 0.2s;">
+                    <a href="physiotherapy.html" class="resource-card-link">
+                        <div class="card h-90 resource-card">
                             <div class="row g-0">
                                 <div class="col-4 col-md-5" style="max-width: 120px;">
                                     <img src="asset/physiotherapy.png" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Physiotherapy">
                                 </div>
                                 <div class="col-8 col-md-7">
-                                    <div class="card-body">
+                                    <div class="card-body text-black">
                                         <h5 class="card-title">Physiotherapy</h5>
                                         <p class="card-text">This therapy aims to help overcome muscle stiffness and joint rigidity. The aim is to improve the ability to move and flexibility.</p>
                                     </div>
@@ -365,15 +154,15 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <a href="speechtherapy.html" class="card-link">
-                        <div class="card h-100">
+                <div class="col-md-4 mb-4 resource-fade-in" style="animation-delay: 0.4s;">
+                    <a href="speechtherapy.html" class="resource-card-link">
+                        <div class="card h-100 resource-card">
                             <div class="row g-0">
                                 <div class="col-4 col-md-5" style="max-width: 120px;">
                                     <img src="asset/speech-therapy.png" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Speech therapy">
                                 </div>
                                 <div class="col-8 col-md-7">
-                                    <div class="card-body">
+                                    <div class="card-body text-black">
                                         <h5 class="card-title">Speech therapy</h5>
                                         <p class="card-text">This therapy may be recommended if Parkinson's patients have difficulty speaking and swallowing saliva or food.</p>
                                     </div>
@@ -382,15 +171,15 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <a href="Psychotherapy.html" class="card-link">
-                        <div class="card h-100">
+                <div class="col-md-4 mb-4 resource-fade-in" style="animation-delay: 0.6s;">
+                    <a href="Psychotherapy.html" class="resource-card-link">
+                        <div class="card h-100 resource-card">
                             <div class="row g-0">
                                 <div class="col-4 col-md-5" style="max-width: 120px;">
                                     <img src="asset/psychoteraphy.jpg" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Psychotherapy">
                                 </div>
                                 <div class="col-8 col-md-7">
-                                    <div class="card-body">
+                                    <div class="card-body text-black">
                                         <h5 class="card-title">Psychotherapy</h5>
                                         <p class="card-text">In patients who also experience depression, the doctor will recommend to undergo therapy with a psychologist.</p>
                                     </div>
@@ -401,19 +190,19 @@
                 </div>
             </div>
     
-            <h2 class="text-center mb-4 text-bold">Surgery</h2>
-            <p class="text-center mb-4">There are 2 medical operations that you can do, see your doctor for further consultation.</p>
+            <h2 class="text-center mb-4 text-bold resource-fade-in" style="animation-delay: 0.8s;">Surgery</h2>
+            <p class="text-center mb-4 resource-fade-in" style="animation-delay: 0.8s;">There are 2 medical operations that you can do, see your doctor for further consultation.</p>
     
             <div class="row">
-                <div class="col-md-6 mb-4 px-3">
-                    <a href="DBS.html" class="card-link">
-                        <div class="card h-90">
+                <div class="col-md-6 mb-4 px-3 resource-fade-in" style="animation-delay: 1s;">
+                    <a href="DBS.html" class="resource-card-link">
+                        <div class="card h-90 resource-card">
                             <div class="row g-0">
                                 <div class="col-4 col-md-4" style="max-width: 120px;">
                                     <img src="asset/DBS.jpg" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Deep brain stimulation">
                                 </div>
                                 <div class="col-8 col-md-8">
-                                    <div class="card-body">
+                                    <div class="card-body text-black">
                                         <h5 class="card-title">Deep brain stimulation (DBS)</h5>
                                         <p class="card-text">Deep Brain Stimulation (DBS) involves implanting electrodes in specific brain areas affected by abnormal neural activity, such as Parkinson's disease. The electrodes send electrical impulses to modify this activity, reducing symptoms like tremors and rigidity.</p>
                                     </div>
@@ -422,15 +211,15 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 mb-4 px-3">
-                    <a href="GammaKnife.html" class="card-link">
-                        <div class="card h-90">
+                <div class="col-md-6 mb-4 px-3 resource-fade-in" style="animation-delay: 1.2s;">
+                    <a href="GammaKnife.html" class="resource-card-link">
+                        <div class="card h-90 resource-card">
                             <div class="row g-0">
                                 <div class="col-4 col-md-4" style="max-width: 120px;">
                                     <img src="asset/gamma-knife-surgery.jpg" class="img-fluid rounded-start h-100 w-100 object-fit-cover" alt="Gamma knife surgery">
                                 </div>
                                 <div class="col-8 col-md-8">
-                                    <div class="card-body">
+                                    <div class="card-body text-black">
                                         <h5 class="card-title">Gamma knife surgery</h5>
                                         <p class="card-text">Gamma knife surgery is performed when the patient is not eligible for DBS. This procedure uses gamma radiation that is precisely focused on the problematic area of the brain, for example in patients with essential tremor or Parkinson's disease who do not respond to treatment.</p>
                                     </div>
@@ -442,9 +231,8 @@
             </div>
         </div>
     </section>
-    
 
-    <footer class="bg-dark text-white py-5">
+    <footer class="bg-dark text-white py-5 resource-footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -502,48 +290,6 @@
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const animatedElements = document.querySelectorAll('.bg-warning h1, .container:not(footer .container) h2, .container:not(footer .container) p, .card');
-        
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.bottom >= 0 &&
-                rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
-                rect.right >= 0
-            );
-        }
-        
-        function animateElements() {
-            animatedElements.forEach(element => {
-                if (isElementInViewport(element) && !element.classList.contains('animate')) {
-                    element.classList.add('animate');
-                }
-            });
-        }
-        
-        // Initial check
-        animateElements();
-        
-        // Trigger animation for elements above the fold immediately
-        setTimeout(animateElements, 100);
-        
-        // Check on scroll
-        window.addEventListener('scroll', animateElements);
-
-        // Fallback to ensure animation occurs
-        setTimeout(() => {
-            document.querySelectorAll('.bg-warning h1').forEach(el => {
-                if (!el.classList.contains('animate')) {
-                    el.classList.add('animate');
-                }
-            });
-        }, 1000);
-    });
-    </script>
 </body>
 </html>
