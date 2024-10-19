@@ -22,6 +22,7 @@
             font-optical-sizing: auto;
             font-weight: normal;
             font-style: normal;
+            background:#ffffff ;
         }
         .navbar-brand {
             font-weight: bold;
@@ -30,13 +31,13 @@
             box-shadow: 0 2px 4px rgba(0,0,0,.1);
         }
         /* Add any additional styles you need here */
-        .bg-cream {
+        .formdiagnosa-bg-cream {
             background-color: #FFF5E6; /* Warna krem lembut */
         }
-        .bg-orange {
-    background-color: #FFA500; /* Warna oranye */
+        .formdiagnosa-bg-orange {
+    background-color: #FFF2C0; /* Warna oranye */
         }
-        .number-circle {
+        .formdiagnosa-number-circle {
             width: 24px;
             height: 24px;
             display: flex;
@@ -49,25 +50,25 @@
         .border-dashed {
             border-style: dashed !important;
         }
-        .dropzone {
+        .formdiagnosa-dropzone {
             background-color: #ffffff;
             cursor: pointer;
         }
-        .dropzone:hover {
+        .formdiagnosa-dropzone:hover {
             background-color: #f8f9fa;
         }
-        .dropzone.highlight {
+        .formdiagnosa-dropzone.highlight {
             border-color: #007bff;
             background-color: #e9ecef;
         }
-        .diagnosis-section .btn-link {
+        .formdiagnosa-diagnosis-section .btn-link {
             color: inherit;
             font-size: inherit;
             font-weight: inherit;
         }
 
-        .diagnosis-section .btn-link:hover,
-        .diagnosis-section .btn-link:focus {
+        .formdiagnosa-diagnosis-section .btn-link:hover,
+        .formdiagnosa-diagnosis-section .btn-link:focus {
             text-decoration: underline;
         }
         body {
@@ -101,6 +102,138 @@
         .social-icons a:hover {
             transform: translateY(-3px);
         }
+
+        .formdiagnosa-diagnosis-section {
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .formdiagnosa-diagnosis-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .formdiagnosa-diagnosis-section .btn-link {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .formdiagnosa-diagnosis-section .btn-link:hover,
+        .formdiagnosa-diagnosis-section .btn-link:focus {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        .formdiagnosa-bg-cream, .formdiagnosa-bg-orange {
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .formdiagnosa-bg-cream {
+            background-color: #FFF5E6;
+        }
+
+        .formdiagnosa-bg-orange {
+            background-color: #FFE0B2;
+        }
+
+        .formdiagnosa-number-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #FFA500;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .formdiagnosa-dropzone {
+            background-color: #ffffff;
+            border: 2px dashed #FFA500;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .formdiagnosa-dropzone:hover, .formdiagnosa-dropzone.highlight {
+            background-color: #FFF5E6;
+            border-color: #FF8C00;
+        }
+
+        .btn-warning {
+            background-color: #FFA500;
+            border-color: #FFA500;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-warning:hover {
+            background-color: #FF8C00;
+            border-color: #FF8C00;
+            color: white;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add these new styles */
+        .formdiagnosa-diagnosis-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .formdiagnosa-diagnosis-text {
+            flex-grow: 1;
+        }
+
+        .formdiagnosa-diagnosis-actions {
+            margin-top: 1rem;
+        }
+
+        .formdiagnosa-upload-section {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .text-bold{
+            font-weight: bold;
+        }
+
+        .btn-custom {
+            background-color: #ffffff;
+            color: #ffa500;
+            border: 2px solid #ffffff;
+            padding: 10px 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-custom:hover, .btn-custom:focus {
+            background-color: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .btn-custom {
+            display: inline-block;
+        }
+
     </style>
 </head>
 <body>
@@ -121,59 +254,94 @@
         </div>
     </nav>
 
+    <section class="bg-warning">
+        <div class="container">
+            <h1 class="text-center py-5 text-bold text-white">Diagnosis form</h1>
+            
+            <div class="row justify-content-center pb-5">
+                <div class="col-md-6">
+                    <form id="formdiagnosa-nameForm" class="bg-white p-4 rounded shadow">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div class="main-content">
         <div class="container">
             <!-- Diagnosa 1 -->
-            <div class="diagnosis-section mb-4">
+            <div class="formdiagnosa-diagnosis-section mb-4 mt-4">
                 <h2 class="text-center mb-2">
-                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#diagnosa1" aria-expanded="true" aria-controls="diagnosa1">
-                        Diagnosa 1
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#formdiagnosa1" aria-expanded="true" aria-controls="formdiagnosa1">
+                        Diagnosis 1
                     </button>
                 </h2>
-                <div class="collapse show" id="diagnosa1">
-                    <div class="py-5 bg-cream">
-                        <p class="text-center text-muted mb-4">Subtitle</p>
+                <div class="collapse show" id="formdiagnosa1">
+                    <div class="py-5 formdiagnosa-bg-cream">
+                        <p class="text-center text-muted mb-4">Spiral Image Analysis</p>
                         
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <img src="asset/Spiral.png" alt="Spiral Image" class="img-fluid rounded mb-3" style="width: 100%; height: 300px; object-fit: cover;">
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">1</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="formdiagnosa-diagnosis-content">
+                                            <div class="formdiagnosa-diagnosis-text">
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">1</span>
+                                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">2</span>
+                                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">3</span>
+                                                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="formdiagnosa-diagnosis-actions">
+                                                <button class="btn btn-warning">See guide</button>
                                             </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">2</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">3</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-warning">See guide</button>
                                     </div>
                                 </div>
                                 
-                                <div class="mt-4">
-                                    <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
+                                <div class="mt-4 formdiagnosa-upload-section">
+                                    <div class="formdiagnosa-dropzone text-center p-5 border border-dashed rounded" id="formdiagnosa-drop-area">
                                         <form class="upload-form">
-                                            <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                            <input type="file" id="formdiagnosa-fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                            <div id="formdiagnosa-preview-container" class="mb-3" style="display:none;">
+                                                <img id="formdiagnosa-preview-image" src="" alt="Preview" style="max-width: 300px; max-height: 300px; object-fit: contain;">
+                                            </div>
                                             <i class="fas fa-image fa-3x text-muted mb-3"></i>
                                             <p class="mb-2">Drag and drop an image here</p>
-                                            <p class="text-muted small mb-3">or</p>
-                                            <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
+                                            <button type="button" class="btn btn-warning" onclick="document.getElementById('formdiagnosa-fileElem').click()">Select a file</button>
                                         </form>
                                     </div>
                                     <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
+                                    <div class="text-center mt-3">
+                                        <button type="button" class="btn btn-warning" id="formdiagnosa-changeFileBtn" style="display:none;" onclick="changeFile()">Change file</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -182,56 +350,93 @@
             </div>
 
             <!-- Diagnosa 2 -->
-            <div class="diagnosis-section mb-4">
+            <div class="formdiagnosa-diagnosis-section mb-4">
                 <h2 class="text-center mb-2">
-                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#diagnosa2" aria-expanded="false" aria-controls="diagnosa2">
-                        Diagnosa 2
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#formdiagnosa2" aria-expanded="false" aria-controls="formdiagnosa2">
+                        Diagnosis 2
                     </button>
                 </h2>
-                <div class="collapse" id="diagnosa2">
-                    <div class="py-5 bg-orange">
-                        <p class="text-center text-muted mb-4">Subtitle</p>
+                <div class="collapse" id="formdiagnosa2">
+                    <div class="py-5 formdiagnosa-bg-orange">
+                        <p class="text-center text-muted mb-4">Voice Analysis</p>
                         
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                                    <div class="col-md-6 mb-4 mb-md-0">
+                                        <img src="asset/Voice.png" alt="Voice Analysis" class="img-fluid rounded mb-3" style="width: 100%; height: 300px; object-fit: cover;">
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">1</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <div class="formdiagnosa-diagnosis-content">
+                                            <div class="formdiagnosa-diagnosis-text">
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">1</span>
+                                                        <p class="mb-0">Prepare a quiet environment for clear voice recording.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">2</span>
+                                                        <p class="mb-0">Choose to either upload an audio file or record your voice directly.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-start">
+                                                        <span class="formdiagnosa-number-circle">3</span>
+                                                        <p class="mb-0">Speak clearly and at a normal pace for accurate analysis.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="formdiagnosa-diagnosis-actions">
+                                                <button class="btn btn-warning">See guide</button>
                                             </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">2</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                        <div class="mb-3">
-                                            <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">3</span>
-                                                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-warning">See guide</button>
                                     </div>
                                 </div>
                                 
-                                <div class="mt-4">
-                                    <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
-                                        <form class="upload-form">
-                                            <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
-                                            <i class="fas fa-image fa-3x text-muted mb-3"></i>
-                                            <p class="mb-2">Drag and drop an image here</p>
-                                            <p class="text-muted small mb-3">or</p>
-                                            <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
-                                        </form>
+                                <div class="mt-4 formdiagnosa-upload-section">
+                                    <ul class="nav nav-tabs" id="voiceAnalysisTabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="upload-tab" data-bs-toggle="tab" data-bs-target="#upload" type="button" role="tab" aria-controls="upload" aria-selected="true">Upload Audio</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="record-tab" data-bs-toggle="tab" data-bs-target="#record" type="button" role="tab" aria-controls="record" aria-selected="false">Record Voice</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="voiceAnalysisTabContent">
+                                        <div class="tab-pane fade show active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                                            <div class="formdiagnosa-dropzone text-center p-5 border border-dashed rounded" id="drop-area-audio">
+                                                <form class="upload-form">
+                                                    <input type="file" id="audioFileElem" accept="audio/*" onchange="handleAudioFiles(this.files)" style="display:none">
+                                                    <div id="audio-preview-container" class="mb-3" style="display:none;">
+                                                        <audio id="audio-preview" controls></audio>
+                                                    </div>
+                                                    <i class="fas fa-microphone fa-3x text-muted mb-3"></i>
+                                                    <p class="mb-2">Drag and drop an audio file here</p>
+
+                                                    <button type="button" class="btn btn-warning" onclick="document.getElementById('audioFileElem').click()">Select an audio file</button>
+                                                </form>
+                                            </div>
+                                            <p class="text-muted small text-center mt-2">MP3, WAV / Max. 10 MB / Max. 30 seconds</p>
+                                            <div class="text-center mt-3">
+                                                <button type="button" class="btn btn-warning" id="changeAudioBtn" style="display:none;" onclick="changeAudioFile()">Change file</button>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="record" role="tabpanel" aria-labelledby="record-tab">
+                                            <div class="text-center p-5 border border-dashed rounded">
+                                                <i class="fas fa-microphone fa-3x text-muted mb-3"></i>
+                                                <p class="mb-3">Click the button below to start recording</p>
+                                                <button id="recordButton" class="btn btn-warning">
+                                                    <i class="fas fa-microphone"></i> Start Recording
+                                                </button>
+                                                <p id="recordingStatus" class="mt-3 d-none">Recording: <span id="recordingTime">00:00</span></p>
+                                                <audio id="audioPlayback" controls class="mt-3 d-none"></audio>
+                                                <br>
+                                                <button id="deleteRecordingBtn" class="btn btn-warning mt-3 d-none" onclick="deleteRecording()">Delete Recording</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
                                 </div>
                             </div>
                         </div>
@@ -240,38 +445,38 @@
             </div>
 
             <!-- Diagnosa 3 -->
-            <div class="diagnosis-section mb-4">
+            <div class="formdiagnosa-diagnosis-section mb-4">
                 <h2 class="text-center mb-2">
-                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#diagnosa3" aria-expanded="false" aria-controls="diagnosa3">
-                        Diagnosa 3
+                    <button class="btn btn-link text-decoration-none" type="button" data-bs-toggle="collapse" data-bs-target="#formdiagnosa3" aria-expanded="false" aria-controls="formdiagnosa3">
+                        Diagnosis 3
                     </button>
                 </h2>
-                <div class="collapse" id="diagnosa3">
-                    <div class="py-5 bg-cream">
-                        <p class="text-center text-muted mb-4">Subtitle</p>
+                <div class="collapse" id="formdiagnosa3">
+                    <div class="py-5 formdiagnosa-bg-cream">
+                        <p class="text-center text-muted mb-4">CT Scan Brain Analysis</p>
                         
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <img src="path/to/brain-image.jpg" alt="Brain Image" class="img-fluid rounded mb-3">
+                                        <img src="asset/Ctscan.jpg" alt="Brain Image" class="img-fluid rounded mb-3" style="width: 100%; height: 300px; object-fit: cover;">
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">1</span>
+                                                <span class="bg-warning rounded-circle me-2 formdiagnosa-number-circle">1</span>
                                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             </div>
                                         </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">2</span>
+                                                <span class="bg-warning rounded-circle me-2 formdiagnosa-number-circle">2</span>
                                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             </div>
                                         </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-center mb-2">
-                                                <span class="bg-warning rounded-circle me-2 number-circle">3</span>
+                                                <span class="bg-warning rounded-circle me-2 formdiagnosa-number-circle">3</span>
                                                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                             </div>
                                         </div>
@@ -279,17 +484,23 @@
                                     </div>
                                 </div>
                                 
-                                <div class="mt-4">
-                                    <div class="dropzone text-center p-5 border border-dashed rounded" id="drop-area">
+                                <div class="mt-4 formdiagnosa-upload-section">
+                                    <div class="formdiagnosa-dropzone text-center p-5 border border-dashed rounded" id="drop-area-3">
                                         <form class="upload-form">
-                                            <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)" style="display:none">
+                                            <input type="file" id="fileElem3" accept="image/*" onchange="handleFiles3(this.files)" style="display:none">
+                                            <div id="preview-container-3" class="mb-3" style="display:none;">
+                                                <img id="preview-image-3" src="" alt="Preview" style="max-width: 300px; max-height: 300px; object-fit: contain;">
+                                            </div>
                                             <i class="fas fa-image fa-3x text-muted mb-3"></i>
                                             <p class="mb-2">Drag and drop an image here</p>
-                                            <p class="text-muted small mb-3">or</p>
-                                            <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem').click()">Select a file</button>
+
+                                            <button type="button" class="btn btn-warning" onclick="document.getElementById('fileElem3').click()">Select a file</button>
                                         </form>
                                     </div>
                                     <p class="text-muted small text-center mt-2">JPG, PNG / Max. 60 MB / Min. 224px x 224px</p>
+                                    <div class="text-center mt-3">
+                                        <button type="button" class="btn btn-warning" id="changeFileBtn3" style="display:none;" onclick="changeFile3()">Change file</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -299,7 +510,14 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white py-5">
+    <section class="bg-warning">
+        <h1 class="text-center py-5 text-bold text-white">All done!</h1>
+        <div class="text-center pb-5">
+            <a href="form.html" class="btn btn-custom btn-lg">Submit!</a>
+        </div>
+    </section>
+
+ <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-4 mb-md-0">
@@ -360,7 +578,46 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        let dropArea = document.getElementById('drop-area');
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameForm = document.getElementById('formdiagnosa-nameForm');
+            const diagnosisSections = document.querySelectorAll('.formdiagnosa-diagnosis-section');
+            const topSection = document.querySelector('section.bg-warning:first-of-type');
+            const bottomSection = document.querySelector('section.bg-warning:last-of-type');
+
+            // Hide diagnosis sections and bottom section initially
+            diagnosisSections.forEach(section => {
+                section.style.display = 'none';
+            });
+            bottomSection.style.display = 'none';
+
+            // Change top section text
+            topSection.querySelector('h1').textContent = 'Please Fill in the Form';
+
+            nameForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+
+                if (firstName && lastName) {
+                    // Hide the name form
+                    nameForm.closest('.row').style.display = 'none';
+
+                    // Show diagnosis sections and bottom section
+                    diagnosisSections.forEach(section => {
+                        section.style.display = 'block';
+                    });
+                    bottomSection.style.display = 'block';
+
+                    // Change top section text back to "Diagnosis form"
+                    topSection.querySelector('h1').textContent = 'Diagnosis form';
+
+                    // You can use the name later if needed
+                    console.log(`Name: ${firstName} ${lastName}`);
+                }
+            });
+        });
+
+        let dropArea = document.getElementById('formdiagnosa-drop-area');
 
         ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
             dropArea.addEventListener(eventName, preventDefaults, false);
@@ -396,14 +653,211 @@
         }
 
         function handleFiles(files) {
-            ([...files]).forEach(uploadFile);
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('formdiagnosa-preview-image').src = e.target.result;
+                        document.getElementById('formdiagnosa-preview-container').style.display = 'block';
+                        document.getElementById('formdiagnosa-changeFileBtn').style.display = 'inline-block';
+                        document.querySelector('.fa-image').style.display = 'none';
+                        document.querySelector('.dropzone p').style.display = 'none';
+                        document.querySelector('.dropzone .btn-warning').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please select an image file.');
+                }
+            }
         }
 
-        function uploadFile(file) {
-            // Implementasi upload file ke server Anda di sini
-            console.log('Uploading file:', file.name);
-            // Contoh: bisa menggunakan FormData dan fetch untuk mengirim file ke server
+        function changeFile() {
+            document.getElementById('formdiagnosa-fileElem').value = '';
+            document.getElementById('formdiagnosa-preview-container').style.display = 'none';
+            document.getElementById('formdiagnosa-changeFileBtn').style.display = 'none';
+            document.querySelector('.fa-image').style.display = 'block';
+            document.querySelector('.dropzone p').style.display = 'block';
+            document.querySelector('.dropzone .btn-warning').style.display = 'inline-block';
         }
+
+        let mediaRecorder;
+        let audioChunks = [];
+        let isRecording = false;
+        let recordingTimer;
+
+        document.getElementById('recordButton').addEventListener('click', toggleRecording);
+
+        function toggleRecording() {
+            if (!isRecording) {
+                startRecording();
+            } else {
+                stopRecording();
+            }
+        }
+
+        async function startRecording() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                
+                mediaRecorder.ondataavailable = (event) => {
+                    audioChunks.push(event.data);
+                };
+                
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    const audioUrl = URL.createObjectURL(audioBlob);
+                    document.getElementById('audioPlayback').src = audioUrl;
+                };
+                
+                mediaRecorder.start();
+                isRecording = true;
+                document.getElementById('recordButton').innerHTML = '<i class="fas fa-stop"></i> Stop Recording';
+                document.getElementById('recordingStatus').classList.remove('d-none');
+                startTimer();
+            } catch (err) {
+                console.error('Error accessing microphone:', err);
+            }
+        }
+
+        function stopRecording() {
+            mediaRecorder.stop();
+            isRecording = false;
+            document.getElementById('recordButton').classList.add('d-none'); // Hide record button
+            document.getElementById('audioPlayback').classList.remove('d-none');
+            document.getElementById('deleteRecordingBtn').classList.remove('d-none');
+            clearInterval(recordingTimer);
+        }
+
+        function startTimer() {
+            let seconds = 0;
+            recordingTimer = setInterval(() => {
+                seconds++;
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                document.getElementById('recordingTime').textContent = 
+                    `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function handleAudioFiles(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('audio/')) {
+                    const audioPreview = document.getElementById('audio-preview');
+                    audioPreview.src = URL.createObjectURL(file);
+                    document.getElementById('audio-preview-container').style.display = 'block';
+                    document.getElementById('changeAudioBtn').style.display = 'inline-block';
+                    document.querySelector('#drop-area-audio .fa-microphone').style.display = 'none';
+                    document.querySelector('#drop-area-audio p').style.display = 'none';
+                    document.querySelector('#drop-area-audio .btn-warning').style.display = 'none';
+                } else {
+                    alert('Please select an audio file.');
+                }
+            }
+        }
+
+        function changeAudioFile() {
+            document.getElementById('audioFileElem').value = '';
+            document.getElementById('audio-preview-container').style.display = 'none';
+            document.getElementById('changeAudioBtn').style.display = 'none';
+            document.querySelector('#drop-area-audio .fa-microphone').style.display = 'block';
+            document.querySelector('#drop-area-audio p').style.display = 'block';
+            document.querySelector('#drop-area-audio .btn-warning').style.display = 'inline-block';
+        }
+
+        let dropArea3 = document.getElementById('drop-area-3');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea3.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea3.addEventListener(eventName, highlight3, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea3.addEventListener(eventName, unhighlight3, false);
+        });
+
+        function highlight3(e) {
+            dropArea3.classList.add('highlight');
+        }
+
+        function unhighlight3(e) {
+            dropArea3.classList.remove('highlight');
+        }
+
+        dropArea3.addEventListener('drop', handleDrop3, false);
+
+        function handleDrop3(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handleFiles3(files);
+        }
+
+        function handleFiles3(files) {
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('preview-image-3').src = e.target.result;
+                        document.getElementById('preview-container-3').style.display = 'block';
+                        document.getElementById('changeFileBtn3').style.display = 'inline-block';
+                        document.querySelector('#drop-area-3 .fa-image').style.display = 'none';
+                        document.querySelector('#drop-area-3 p').style.display = 'none';
+                        document.querySelector('#drop-area-3 .btn-warning').style.display = 'none';
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please select an image file.');
+                }
+            }
+        }
+
+        function changeFile3() {
+            document.getElementById('fileElem3').value = '';
+            document.getElementById('preview-container-3').style.display = 'none';
+            document.getElementById('changeFileBtn3').style.display = 'none';
+            document.querySelector('#drop-area-3 .fa-image').style.display = 'block';
+            document.querySelector('#drop-area-3 p').style.display = 'block';
+            document.querySelector('#drop-area-3 .btn-warning').style.display = 'inline-block';
+        }
+
+        function deleteRecording() {
+            // Reset audio playback
+            document.getElementById('audioPlayback').src = '';
+            document.getElementById('audioPlayback').classList.add('d-none');
+            
+            // Show recording button
+            document.getElementById('recordButton').classList.remove('d-none');
+            document.getElementById('recordButton').innerHTML = '<i class="fas fa-microphone"></i> Start Recording';
+            
+            // Hide delete button
+            document.getElementById('deleteRecordingBtn').classList.add('d-none');
+            
+            // Reset recording status
+            document.getElementById('recordingStatus').classList.add('d-none');
+            
+            // Reset variables
+            audioChunks = [];
+            isRecording = false;
+        }
+
+        // Tambahkan event listener untuk audio playback
+        document.getElementById('audioPlayback').addEventListener('play', function() {
+            document.getElementById('recordButton').classList.add('d-none');
+        });
+
+        document.getElementById('audioPlayback').addEventListener('pause', function() {
+            document.getElementById('recordButton').classList.remove('d-none');
+        });
+
+        document.getElementById('audioPlayback').addEventListener('ended', function() {
+            document.getElementById('recordButton').classList.remove('d-none');
+        });
     </script>
 </body>
 </html>
