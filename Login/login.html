@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container login-container">
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="image-container"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-header">
+                        <h2 class="mb-0 fw-bold">Welcome Back</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="mb-4 d-flex justify-content-between align-items-center">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="forgot-password.html" class="text-muted">Forgot password?</a>
+                            </div>
+                            <div class="d-grid gap-3">
+                                <button type="submit" class="btn btn-warning btn-login fw-bold">Sign in</button>
+                                <button class="btn btn-google btn-login fw-bold" type="button">
+                                    <i class="fab fa-google me-2"></i>Sign in with Google
+                                </button>
+                            </div>
+                        </form>
+                        <div class="mt-4 text-center">
+                            <p class="mb-0">Don't have an account? <a href="register.html" class="fw-bold">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a1b2c3d4e5.js" crossorigin="anonymous"></script>
+</body>
+</html>
