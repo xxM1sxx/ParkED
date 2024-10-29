@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diagnosis result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+        body{
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+
+        .footer {
+            background-color: #ffc107;
+            padding: 1rem 0;
+        }
+
+        .social-icons a {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+
+        footer a {
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffc107 !important;
+        }
+
+        /* Existing styles */
+        .form-container {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffca2c;
+            border-color: #ffca2c;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ParkED</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Information</a></li>
+                </ul>
+            </div>
+            <a href="login.html" class="btn bg-warning text-white d-none d-lg-block" type="button">Sign In</a>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h1 class="text-center mb-4">Diagnosis Result</h1>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Spiral Test</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Result:</strong>Positive</p>
+                        <p><strong>Info:</strong>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt aliquid asperiores placeat, cum mollitia, alias consequatur recusandae amet fugit, cupiditate repellat architecto cumque deserunt sit neque consectetur? Eos, corporis non! Lorem ipsum dolor.   </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="card-title mb-0">Voice Analysis</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Result:</strong>Positive</p>
+                        <p><strong>Info:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ullam quod, blanditiis consequatur praesentium libero reprehenderit nihil sequi autem, tempora eligendi, esse mollitia? Molestias ab ea aperiam voluptas, distinctio voluptates.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">CT Scan Analysis</h5>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Result:</strong>Positive</p>
+                        <p><strong>Info:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sint eum labore alias earum repudiandae, exercitationem dolore reiciendis, voluptatem ad repellat consequuntur sequi, tempore corrupti possimus eaque odit. Doloribus, placeat?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="alert alert-warning mt-4" role="alert">
+            <h4 class="alert-heading">Important Note:</h4>
+            <p>This diagnosis result is indicative and does not replace a professional medical diagnosis. Please consult with a specialist for further evaluation and appropriate treatment plans.</p>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="resources.html" class="btn btn-primary">Check Resources</a>
+            <a href="#" class="btn btn-outline-secondary">Download Report</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h2 class="h5 mb-3">ParkED</h2>
+                    <p class="small">Empowering through education and early detection of Parkinson's disease.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="h6 mb-3">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">About Parkinson's</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Diagnosis Tools</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Resources</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h3 class="h6 mb-3">Diagnosis Tools</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Spiral Test</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Voice Analysis</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">CT Scan Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="h6 mb-3">Resources</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="physiotherapy.html" class="text-white text-decoration-none">Physiotherapy</a></li>
+                        <li><a href="speechtherapy.html" class="text-white text-decoration-none">Speech Therapy</a></li>
+                        <li><a href="Psychotherapy.html" class="text-white text-decoration-none">Psychotherapy</a></li>
+                        <li><a href="DBS.html" class="text-white text-decoration-none">Deep Brain Stimulation</a></li>
+                        <li><a href="GammaKnife.html" class="text-white text-decoration-none">Gamma Knife Surgery</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Glossary</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="row">
+                <div class="col-md-6 small">
+                    &copy; 2023 ParkED. All rights reserved.
+                </div>
+                <div class="col-md-6 text-md-end small">
+                    <a href="#" class="text-white text-decoration-none me-2">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none me-2">Terms of Service</a>
+                    <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
